@@ -47,38 +47,38 @@ else:
         sys.exit()
 
 # imports plugins...
-path = "d3vilbot/plugins/*.py"
-files = glob.glob(path)
-for name in files:
-    with open(name) as f:
-        path1 = Path(f.name)
-        shortname = path1.stem
-        load_module(shortname.replace(".py", ""))
+#path = "d3vilbot/plugins/*.py"
+#files = glob.glob(path)
+#for name in files:
+#    with open(name) as f:
+#        path1 = Path(f.name)
+#        shortname = path1.stem
+#        load_module(shortname.replace(".py", ""))
 
 # Extra Modules...
-# extra_repo = Config.EXTRA_REPO or "https://github.com/TEAM-D3VIL/D3VILADDONS"
-# if Config.EXTRA == "True":
-#     try:
-#         os.system(f"git clone {extra_repo}")
-#     except BaseException:
-#         pass
-#     LOGS.info("Installing Extra Plugins")
-#     path = "d3vilbot/plugins/*.py"
-#     files = glob.glob(path)
-#      for name in files:
-#         with open(name) as ex:
-#             path2 = Path(ex.name)
-#             shortname = path2.stem
-#             load_module(shortname.replace(".py", ""))
+ extra_repo = Config.EXTRA_REPO or "https://github.com/TEAM-D3VIL/D3VILADDONS"
+ if Config.EXTRA == "True":
+     try:
+         os.system(f"git clone {extra_repo}")
+     except BaseException:
+         pass
+     LOGS.info("Installing Extra Plugins")
+     path = "d3vilbot/plugins/*.py"
+     files = glob.glob(path)
+      for name in files:
+         with open(name) as ex:
+             path2 = Path(ex.name)
+             shortname = path2.stem
+             load_module(shortname.replace(".py", ""))
 
 # let the party begin...
 LOGS.info("➪𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶 𝙱𝙾𝚃 𝙼𝙾𝙳𝙴")
 tbot.start()
-LOGS.info("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+LOGS.info("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 LOGS.info(
     "𝖧𝖾𝖺𝖽 𝗍𝗈 @D3VIL_SUPPORT 𝖿𝗈𝗋 𝖴𝗉𝖺𝖽𝗍𝖾 𝖭𝖾𝗐. 𝖠𝗅𝗌𝗈 𝗃𝗈𝗂𝗇 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 to 𝗀𝖾𝗍 𝗎𝗉𝖽𝖺𝗍𝖾 𝗋𝖾𝗀𝖺𝗋𝖽𝗂𝗇𝗀 𝗍𝗈 𝖣3𝗏𝗂𝗅𝖡𝗈𝗍."
 )
-LOGS.info("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+LOGS.info("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 # that's life...
 async def d3vil_is_on():
